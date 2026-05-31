@@ -38,6 +38,7 @@ body{
   color: var(--textColor);
   font-size: 1.3rem;
   line-height: 1.5;
+  max-width: 270px;
 }
 
 .main span{
