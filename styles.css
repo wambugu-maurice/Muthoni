@@ -1,0 +1,219 @@
+:root{
+    --mainBg: #FDF6E7;
+    --cardBg: #D6FFF7;
+    --mainBtn: #1990c6;
+    --secBtn: #FF6B2C;
+    --textColor: #002a53;
+    --secBg: #002a53;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mainBg);
+}
+
+.main h2{
+    font-family: "Finlandica Headline", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--textColor);
+    font-size: 1.9rem;
+}
+
+.main p{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  color: var(--textColor);
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.main span{
+    color: var(--secBtn);
+}
+
+.welcomeCard{
+    background-color: var(--cardBg);
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: -2px -2px 5px 2px var(--secBg);
+}
+
+#galleryBtn{
+    width: 200px;
+    padding: 15px;
+    background-color: var(--secBtn);
+    color: linen;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+    transition: 0.9s;
+}
+
+#galleryBtn:hover{
+    transform: scale(1.1);
+    color: var(--textColor);
+}
+
+.welcomeCard p{
+    max-width: 500px;
+}
+
+
+.galleryMain{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--secBg);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.card{
+  max-width: 250px;
+  max-height: fit-content;
+  background-color: var(--mainBg);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  color: var(--textColor);
+  margin: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+.card:hover,
+.card:focus-within{
+  transform: translateY(-6px) scale(1.01);
+  box-shadow:
+    0 5px 8px var(--cardBg),
+    0 0 5px var(--cardBg);
+}
+
+.title{
+    font-size: 0.9rem;
+}
+
+.image{
+overflow: hidden;
+}
+
+.image img{
+    max-height: 200px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.image img:hover{
+    transform: scale(1.9);
+}
+
+.content small{
+    color: var(--secBtn);
+    font-size: 10px;
+}
+
+.content span{
+    color: var(--secBtn);
+    font-weight: 500;
+}
+
+video{
+    max-width: 700px;
+    max-height: 300px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.main h2:hover{
+    transform: translateY(-3px);
+    transition: 0.4s;
+}
+
+.main p:hover{
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.main span:hover{
+    filter: brightness(1.2);
+}
+
+@media (max-width: 1200px){
+    .welcomeCard{
+        width: 80%;
+        height: auto;
+        padding: 20px;
+    }
+    video{
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 992px){
+    .main h2{
+        font-size: 1.6rem;
+    }
+    .main p{
+        font-size: 1.1rem;
+    }
+    .welcomeCard{
+        width: 85%;
+    }
+    .card{
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 768px){
+    .main{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .welcomeCard{
+        width: 95%;
+        height: auto;
+    }
+    .card{
+        max-width: 90%;
+    }
+    .galleryMain{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px){
+    .main h2{
+        font-size: 1.3rem;
+    }
+    .main p{
+        font-size: 1rem;
+    }
+    #galleryBtn{
+        width: 160px;
+        padding: 12px;
+    }
+    .welcomeCard{
+        border-radius: 25px;
+    }
+}
